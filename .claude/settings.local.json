@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(conda activate *)",
+      "Bash(python -c \"import sys; print\\(sys.executable\\)\")",
+      "Bash(where conda *)",
+      "Read(//c/Users/张德民/miniconda3/Scripts/**)",
+      "Read(//c/Users/张德民/anaconda3/Scripts/**)",
+      "Read(//d/Users/张德民/miniconda3/Scripts/**)",
+      "Bash(/d/Anaconda3/envs/marquan/python.exe *)",
+      "Bash(taskkill *)",
+      "Bash(netstat -ano -p TCP)",
+      "Bash(cmd //c \"for /f \\\\\"tokens=5\\\\\" %a in \\('netstat -ano ^| findstr :8000.*LISTENING'\\) do @taskkill /F /PID %a 2>nul\")",
+      "Bash(netstat -ano)",
+      "Bash(disown)",
+      "Bash(powershell -Command \"Get-NetTCPConnection -LocalPort 8000 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id \\\\$_.OwningProcess -Force -ErrorAction SilentlyContinue }; Write-Output 'Done'\")",
+      "Bash(cmd //c \"taskkill /F /PID 5600 /T 2>nul & taskkill /F /PID 14284 /T 2>nul & taskkill /F /PID 21248 /T 2>nul & echo Done\")"
+    ]
+  }
+}
